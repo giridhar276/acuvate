@@ -1,0 +1,694 @@
+
+*** Everything in Python is object ***
+*** Every object contains set of methods ***
+
+objects
+-------
+
+
+number
+------
+number can be integer or decimal or hexa or octal
+a = 10
+aval = 3.44
+
+
+string
+-------
+string is defined in single or double or triple quotes
+
+aname = 'python programming'
+bname = "spark programming"
+cname = """
+java coding
+"""
+dname = '''scala'''
+
+
+list ( array in C )
+------------------
+list contains set of elements.
+Elements can be group of numbers or strings or any combination.
+combination : list of lists
+              list of tuples
+              list of dictionaries
+list is defined in []
+
+alist = [10,20,30,40]
+blist = ["python","perl","java"]
+clist = [10,343.33,"spark"]
+dlist = [[10,20],["python","pyspark"],alist]  # list of lists
+
+
+
+tuple  ( READ ONLY , IMMUTABLE )
+-----
+tuple contains set of elements.
+Elements can be group of numbers or strings or any combination.
+**** Elements inside TUPLE cannot be modified DIRECTLY ****
+combination : list of lists
+              list of tuples
+              list of dictionaries
+
+tuple elements are defined in ().
+
+atup = (10,45,43)
+btup = ("ML","DL","scala")
+ctup = (34,443.33,"unix")
+
+
+
+dictionary   ( replica of JSON )
+------------
+dictionary contains elements in key:value pairs
+dictionary elements are defined in {}.
+keys  :  key can be either number or string
+values: values can be number or string or list or tuple or dictionary
+
+syntax:     object = { key:value , key:value , key:value }
+Example:     book  = {"chap1":10 ,"chap2":20 ,"chap3":30 ,"chap1":1000 }
+             numbs = {1:2,3:4,5:6}
+            bookinfo = {"chap1":["Arthur",10,"UK"],"chap2":20 ,"chap3":{"book":"US" } }   # complex dictionary
+          
+
+
+set
+----
+set is UNORDERED collection of UNIQUE elements of SAME type.
+        --------              --------           -------
+
+set elements are defined in {}.
+
+aset = {10,20,30,10,10,10,10,10}
+
+
+
+
+
+comments
+--------
+
+single line comment : ( #)
+
+
+multi line comment:  The lines defined in between ''' and ''' are ignored by interpreter
+
+
+
+methods:
+---------
+methods are object specific.
+- string methods are different to list methods
+- . is used to used the access the object objects
+
+functions
+----------
+functions are common for all the objects
+
+- builtin functions
+- user defined functions
+
+
+builtin functions
+------------------
+print()
+help()
+range()
+type()
+isinstance()
+max()
+min()
+sum()
+zip()
+input()
+
+conversion functions/typecasting functions
+list()
+tuple()
+str()
+dict()
+set()
+int()
+float()
+octal()
+hex()
+
+
+statements
+------------
+
+conditional statements
+-------------------
+if condition
+if-else
+if-elif-elif... else
+
+
+control statements
+------------------
+while
+for
+
+
+jump statements
+---------------
+break
+continue
+
+
+operators
+----------
+
+
+arithmetic operators : + - * % /
+
+assignment operators ( ++ and -- are not allowed in python )
+--------------------
+val = 10
+val+=1       val = val + 1
+val-=10      val = val -10
+
+logical operators
+------------------
+and     if len(name) == 10  and name.isupper() :
+or      if  name.islower()  or  len(vname) == 3 :
+not     if not name.isupper()
+
+relational operators
+----------------------
+< > <= >= == !=                
+
+special operators
+---------------------
+in
+as
++
+*
+
+file handling
+----------------
+
+
+file formats
+-------------
+
+txt    -------- only text
+csv    -------- only text
+xls    ---------- third party tool
+doc    ---------- third party tool
+docx    ---------- third party tool
+mp3    ---------- third party tool
+jpg
+.dat    -------- only text
+gif
+png
+log    -------- only text
+html  
+rtf    -------- only text
+xlsx    ---------- third party tool
+pdf    ---------- third party tool
+elf    ---------- third party tool
+ppt    ---------- third party tool
+pptx    ---------- third party tool
+xml --------------- only text
+json    -------- only text
+yaml    -------- only text
+.con
+.bat
+
+
+- working with flat files ( .log .conf .csv .dat  .json .yaml .xml .... )
+-------------------------------------------------------
+- read  ( r)
+- write ( w )
+- append ( a)
+
+syntax : opening the file
+-------------------------------
+objectname = open(filename,mode)
+
+
+closing the file
+----------------
+object.close()
+
+
+writing to the file
+--------------------
+fobj = open("info.txt","w")
+fobj.write("python programming\n")
+
+fobj.close()
+
+case1 : If the file is already existing .. it overwrites the content
+case2 : If the file is not existing ...... file gets created
+
+
+read operation
+---------------
+
+- reading line by line
+- fobj.readlines()       : output will be in list format
+- fobj.read()            : output will be displayed as single strip
+- using csv library
+- using pandas library
+
+Exception handling
+-------------------
+
+There are 2 types of errors.
+
+
+1. syntax error
+2. semantic error or runtime error or logical error
+
+Handling the exception in the runtime is known as exception handling.
+
+python           Java/C++
+-------         -----------
+try                 try
+except              catch
+else              
+finally             finally
+raise               throw
+
+
+
+
+function | block | definition | subroutine | submodule
+
+
+user defined functions
+--------------------------
+-code reusability
+
+- Instead of writing the code again and again , the repeated code can be called as block and the block can be called by multiple times.
+
+passing arguments
+----------------------
+fixed arguments
+default arguments
+keyword arguments
+variable length arguments
+
+
+
+
+
+library | package | module
+----------------------------
+library contains set of pre defined code/files written by someone.
+
+Basically there are 2 types of libraries
+
+1. Built-in libraries
+
+2. third party libraries
+
+Built-in libraries : Builtin libraries are by default installed with the python which are generally used by
+                     everyone.(  json operations, csv operations , directory handling(deleting,listing,validating
+                                 the file, working with date and time , copying files, moving , mailing,
+                                 ftp, xml operations, yaml operations , downloading files  )
+
+C:\Users\gsripath\anaconda3\Lib
+
+Third party libraries: Depending on the requirement( excel operations, database operations,web applications,
+                         data analytics, ML , DL, Image processing, Networking , cloud)  developer  has to install
+                         the third party library from www.pypi.org or need to install manually or using PIP tool
+
+C:\Users\gsripath\anaconda3\Lib\site-packages
+
+
+importing library
+--------------------------
+
+
+importing all the methods   ( all the methods are accessed with . operator )
+------------------------
+import math
+print(math.floor(34.3))  #34
+print(math.ceil(45.9))   # 46
+print(math.log(2) )
+
+
+importing library with alias
+-------------------------
+import matplotlib as m
+m.plot(x,y)
+
+
+importing required methods ONLY   ( since the methods are directly imported...     . operator is not required )
+--------------------------------
+from math import floor
+from math import floor,ceil,log
+print(floor(45.4))
+print(log(3))
+
+
+importing all the methods     ( since the methods are directly imported...     . operator is not required )
+------------------------
+from math import *
+print(floor(56.5))
+
+
+How to refer and understand documentation ?
+Every library has its own provided documentation with set of examples too.
+
+
+
+8000+  builtin libraries
+300000+ third party library
+
+builtin libraries
+-----------------------
+
+os            : os.listdir() os.remove() 
+sys           : system config information   sys.exit(0)
+urllib.request: working with http
+math          : mathematical operations
+random        : random numbers
+calendar
+smtplib       : sending mails
+ftplib        : ftp'ng the file
+telnetlib     :
+logging       : logging all the events
+shutil        : copy,move,rmtree ....
+filecmp       : comparing directories
+zipfile       : create/extract the zip files
+rarfile       : create/extract the tar files
+tarfile       : create/extract the tarfiles
+getpass       : shadowing the password
+json          : reading/writing json files
+csv           : reading/writing csv files
+xml        
+sysconfig     : system configuration
+collections   : working with dictionaries
+argparse      : passing args from command line
+optparse      : passing args from command line
+time          : working with date and time
+datetime      : working with date and time
+cryptography  : encrypting and decrypting the passwords  
+heapq         : performing array operations
+gzip          : reading gunzip files
+re            : validating the strings
+ipadresss     : validting ip address
+platform      : display platform information
+pathlib       : creating temp files
+threading     : for performing multi threading
+multiprocessing:
+subprocess    : invoking the system commands ( linux or dos commands)
+
+
+
+frequently used third party libraries
+---------------------------------------
+database related
+----------------
+pymysql   :  mysql
+cx_Oracle :  Oracle
+pymongo   :  MOngoDBB
+pymssql   : sql server
+
+
+web frameworks ( developing web applications)
+--------------
+django
+flask
+bottom
+
+analytics/machine learning
+---------------------------
+numpy
+scipy
+pandas
+seaborn
+statistics
+plotly
+ggplot
+matplotlib   : visualizing data .. bar graph.. pie graph
+scikit-learn :  machine learning algorithms
+
+image processing
+---------------
+pillow
+opencv
+
+APIs ( REST API) ( web services )   ( SOAP services   REST APIs)
+-----
+urllib
+requests
+
+excel programming
+------------------
+openpyxl    : reading/write excel files
+xlsxwriter  : writing to excel file
+pyexcel
+xlrd
+python-docx : working with ms-word
+
+networking
+-----------
+paramiko   :  interacting with remote servers
+netmiko    :  connecting to router/switch
+pyping     :  ping any host or ip address
+
+
+
+web scrapping
+--------------
+beautifulsoup
+scrapy
+
+
+cloud
+------
+oci   : Oracle cloud infrastructure
+boto3 : aws infrastructure
+gcp   : Googld cloud
+azure
+
+
+
+Write the python program to display list all the files and directories from the current directory with proper exception handling.
+------------------------------------------------------------------------------------------------------------
+
+write the python program to display ONLY files from the current directory with exception handling
+
+------------------------------------------------------------------------------------------------------------
+
+write the python program to display ONLY directories from the Desktop with exception handling
+
+------------------------------------------------------------------------------------------------------------
+
+Write the python program to display list all the files and directories from the current directory 
+and rewrite the output to the file  with proper exception handling.
+
+conditions:  
+-----------
+If the file is already existing then delete the file
+
+------------------------------------------------------------------------------------------------------------
+
+
+write a program to display all the files and directories separately from the current directory
+
+
+files
+------
+abc.py
+realestate.csv
+example.py
+h.
+
+
+directories
+--------------
+jsonfiles
+
+------------------------------------------------------------------------------------------------------------
+ Write a Python program to display ONLY .py files and its size as below from the current directory with proper formatting.
+
+------------------------------------------------------------------------------------------------------------
+ Write a Python program to display the below information.
+
+display the current user name
+display current working directory
+display Operating system name
+display process id of your running program
+display the current timestamp
+display yesterday’s date
+display tomorrow’s date
+display all the environment variables that are existing
+display the python executable path ( just like ‘which python3’ in Linux )
+
+------------------------------------------------------------------------------------------------------------
+
+Write a Python program to display the below information.
+– disk utilization of C:\ ( total , used and free space)
+– disk utilization of \tmp ( if using linux)
+– display CPU utilization
+– display Memory utilization
+
+------------------------------------------------------------------------------------------------------------
+
+Write a Python program to create 100 directories in the current directory.
+
+
+------------------------------------------------------------------------------------------------------------
+
+
+
+
+import re
+---
+-search
+-replace
+-split
+-find
+-findall
+
+The power of re is because of the metacharacter or wildcard characters
+
+^ :  beginning of the string
+     if re.search("^python",line):
+
+$ :  end of the string
+     if re.search("python$",line):
+ 
+* :  zero or more occurences of the preceding character
+     if re.search("pyt*hon",line):
+
+     python     valid
+     pytttthon  valid
+     pyhon      valid
+     pyttttthon valid
+
++  : one or more occuence of the preceding character
+     if re.search("pyt+hon",line):
+
+
+     python     valid
+     pytttthon  valid
+     pyhon      Invalid
+     pyttttthon valid
+
+
+?  : either zero or one occurence of preceding character
+     if re.search("pyt?hon",line):
+
+     python     valid
+     pytttthon  Invalid
+     pyhon      valid
+     pyttttthon Invalid
+
+.  :  any single character or symbol or digit
+     if re.search(".ython",line):
+
+
+() :  (pattern1|pattern2)
+
+       if re.search("(python|perl|unix)", line):
+       - display all the lines containing python or perl
+
+
+[] :  [ character classs ]
+      if re.search("[pymzq]ython",line):
+	 re.search("[a-z]qython",line):
+	 re.search("[a-zA-Z0-9\[\]\*]]ython",line):
+
+{}  :  {m,n}
+       {min,max}
+      if re.search("pyt{1,5}hon",line):      t should exist in the range of only 1 to 5
+      if re.search("pyt{1,}hon",line):      t should exist in the range of only 1 to max
+      if re.search("pyt{5}hon",line):         should be exactly defined for ONLY 5 times
+
+\d \s \w : white space characters
+\d - digit
+\s - space
+\w - word
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
