@@ -154,6 +154,7 @@ special operators
 in
 as
 *
++   concatenation operator
 
 
 
@@ -167,7 +168,8 @@ commenting in python
 
 multiline comment
 
-''' this
+''' 
+this
  is 
 the
 multi line 
@@ -213,6 +215,189 @@ closing the object
 ---------------------
 syntax:    object.close()
 example:     fobj.close()
+
+
+exception handling
+---------------------
+
+1. syntax error
+2. sementic error or runtime error
+
+
+handling the errors in the runtime is known
+as exception handling
+
+
+try
+except
+else
+finally
+raise
+
+
+
+user-defined functions
+--------------------
+- reusability
+
+ways of passing arguments
+-------------------------
+-fixed arguments
+- default arguments
+- variable length arguments
+
+
+
+
+
+library | package | module 
+---------------------------
+
+
+importing all the methods
+------------------------------
+import math
+print(math.log(2))
+print(math.tan(2))
+
+
+importing with alias name
+--------------------------
+import math as m
+print(m.log(2))
+print(m.cos(1))
+
+importing ONLY required methods ( . is not required in this context )
+-----------------------------
+from math import log
+print(log(2))
+print(ceil(34.4))
+
+
+
+import os
+                                        ftp or SSH 
+
+os.chdir("D:\\")
+
+os.unlink('file.txt')
+os.remove('a.txt')
+
+
+There are 2 types of libraries
+-----------------------------
+
+
+- builtin libraries
+--------------------
+All the builtin libraries are installed with python setup which are generally used(OS Operations, math operations, mailing , date and time ,ftp operations ,calendar ,copying files , zipping) by everyone.
+
+
+- third party libraries
+-----------------------
+Depending on the requirement(cloud, DS , networking, datanalytics, database opertions) developer has to install the third party library from https://pypi.org/   OR pip tool.
+
+
+
+pip tool
+----------
+when you install python ,pip(tiny tool or installing packages )  will be install along with it.
+
+
+
+
+
+
+
+
+
+display all databases
+--------------------
+show databases;
+
+creating your database
+---------------------
+create database acuvate;
+
+access your database
+------------------
+use acuvate;
+
+display all tables ( it will be empty)
+-------------------------------------
+show tables ;
+
+creating table
+--------------
+create table realestate ( street varchar(100), city varchar(100) );
+
+inserting records
+------------------
+insert into realestate values('HitechCity','Hyderabad');
+insert into realestate values('Banjara Hills','Hyderabad');
+
+displaying all the records
+----------------------------
+select * from realestate ;
+
+
+display structure of table
+------------------------------
+desc realestate;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
